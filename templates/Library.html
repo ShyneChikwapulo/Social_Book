@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="{% static 'assets/css/Library.css' %}">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        
+        
+
+    </head>
+    
+    <body>
+
+        <nav >
+            <div class="mock">
+            <div class="fixed" style="background:rgb(30 58 138);">
+              <div class="nav-content">
+                <span style="color: rgb(255, 255, 255); font-size: 27px; margin-right: 60px;"><a href="/"><b><img style="width: 70px; height: 70px; margin-left: 30px; margin-top: 20px;"src="{% static 'assets/images/icon.png' %}" /></b></a></span>
+                <div class="desktop-only">
+                    
+    
+                </div>
+    
+              </div>
+            </div>
+        </nav>
+
+            <div class="header">
+                <div class="row1">
+                    <h1>A room without books is like<br/>a body without a soul.</h1>
+                </div>
+                <div class="row2">
+                    <h1>Find your Book</h1>
+                    <div id="input" class="search">
+                        <input id="search-box" type="text" placeholder="Enter your Book Name" value="python">
+                        <button id="search"><i class="fas fa-search"></i></button>
+                    </div>
+                    <img src="{% static 'assets/images/bg22.png' %}" alt="" style="width: 300px; top: 30px;">
+                </div>
+            </div>
+            
+            
+            <div class="book-list">
+                <h2 class="text-center">Search Result</h2>
+                <div class="container" id="list-output">
+                    <div class="row">
+                        <!-- card  -->
+            
+                    </div>
+
+                </div>
+            </div>
+
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{% static 'assets/js/Library.js' %}"></script>
+    
+
+
+</html>

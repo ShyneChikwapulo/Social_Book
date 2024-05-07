@@ -1,0 +1,142 @@
+
+
+header {
+  box-shadow: 0 6px 5px 0 rgba(0, 0, 0, 0.322);
+
+}
+/* ===============================================other panel */
+.side-nav{
+  width: 90px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 15px;
+  background: rgba(0, 102, 255, 0.2);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  transition: width 0.5s;
+  font-family: 'Bodoni Moda', serif;
+  /* font-weight: bold !important; */
+  font-size: 15px !important;
+  z-index: 1;
+
+
+}
+.user{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.user div{
+  display: none;
+}
+
+.user h2{
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+
+}
+.user-img{
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin: auto;
+}
+
+.navbar-list{
+ list-style: none;
+ /* padding: 0 15px; */
+
+}
+
+.navbar-list li{
+  margin: 0px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar-list li i{
+  font-size: 25px;
+  margin-right: 0px;
+  color: rgb(0, 15, 88);
+  
+
+
+}
+.navbar-list li h3{
+white-space: nowrap;
+display: none;
+font-size: 15px;
+  
+
+}
+
+.side-nav:hover{
+  width: 200px;
+}
+
+.side-nav:hover .user div{
+  display: block;
+}
+
+.side-nav:hover .user{
+  width: 100%;
+  background: rgba(0,102,255,0.2);
+  backdrop-filter: blur(5px);
+}
+
+.side-nav:hover .navbar-list li h3{
+  display: block;
+}
+
+.side-nav:hover .navbar-list li i{
+  margin-right: 10px;
+  margin-left: 10px;
+
+}
+
+.side-nav:hover .navbar-list li{
+  justify-content: flex-start;
+}
+
+.navbar-list .menu-item{
+  display: flex;
+  align-items: center;
+  height: 3.4rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+  position: relative;
+  
+}
+
+.navbar-list .menu-item:hover{
+  background: hsla(205, 100%, 51%, 0.326);
+
+}
+
+.navbar-list .active{
+  background: hsla(205, 100%, 51%, 0.326);
+ }
+
+ .side-nav:hover .active::before {
+  content: "";
+  display: block;
+  width: 0.2rem;
+  height: 100%;
+  position: absolute;
+  background-color: hsl(206, 100%, 47%);
+}
