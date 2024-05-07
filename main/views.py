@@ -225,7 +225,7 @@ def proxy_news(request):
         # Make a request to the News API
         response = requests.get('https://newsapi.org/v2/top-headlines?'
        'sources=bbc-news&'
-       'apiKey=f62937c8a3e54e7abc2653ea4224d34f')
+       'apiKey=your-api-key')
         data = response.json()
         return JsonResponse(data)
     except Exception as e:
