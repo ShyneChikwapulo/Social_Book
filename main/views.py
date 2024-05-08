@@ -8,9 +8,10 @@ from itertools import chain
 from django.http import JsonResponse
 import random
 import requests
+from .config import NEWS_API_KEY
 # from django.urls import reverse
 
-
+# print(NEWS_API_KEY)
 # from chat.models import Thread
 
 # Create your views here.
@@ -223,9 +224,8 @@ def logout(request):
 def proxy_news(request):
     try:
         # Make a request to the News API
-        response = requests.get('https://newsapi.org/v2/top-headlines?'
-       'sources=bbc-news&'
-       'apiKey=your-api-key')
+        response = requests.get(f'https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey={NEWS_API_KEY}')
+        data = response.json()
         data = response.json()
         return JsonResponse(data)
     except Exception as e:
